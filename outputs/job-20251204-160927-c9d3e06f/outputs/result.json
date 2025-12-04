@@ -1,0 +1,32 @@
+{
+  "metadata": {
+    "title": "Image1 – Premium Quality",
+    "bullets": [
+      "High-quality build (589x736 px photo)",
+      "Thoughtful design for everyday use",
+      "Great gift idea",
+      "Ships fast"
+    ],
+    "description": "Image1 – Premium Quality\n\n• High-quality build (589x736 px photo)\n• Thoughtful design for everyday use\n• Great gift idea\n• Ships fast\n\nCarefully crafted and photographed for clarity. Colors may vary slightly across screens.",
+    "seo_tags": [
+      "image1",
+      "handmade",
+      "gift",
+      "unique"
+    ],
+    "attributes": {
+      "brand": null,
+      "material": null,
+      "color": null,
+      "size": null,
+      "custom": {}
+    }
+  },
+  "assets": {
+    "supplementary_images": [
+      "C:\\Users\\perci\\PycharmProjects\\GenAIProject\\outputs\\job-20251204-160927-c9d3e06f\\outputs\\supplementary_1.jpg"
+    ],
+    "marketing_gif": "C:\\Users\\perci\\PycharmProjects\\GenAIProject\\outputs\\job-20251204-160927-c9d3e06f\\outputs\\marketing.gif"
+  },
+  "workspace_dir": "C:\\Users\\perci\\PycharmProjects\\GenAIProject\\outputs\\job-20251204-160927-c9d3e06f"
+}
