@@ -1,0 +1,21 @@
+{
+  "name": "content-generator",
+  "version": "1.0.0",
+  "description": "AI-powered content generator for text, images, and videos",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "stop": "killall node",
+    "restart": "echo 'Restarting content-generator...'",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "node-fetch": "^3.3.2",
+    "openai": "^4.73.0"
+  }
+}
+

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Content Generator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="app-container">
+  <header class="app-header">
+    <div class="logo">
+      <i class="fas fa-magic"></i>
+      <h1>Content Generator</h1>
+    </div>
+    <p class="subtitle">Generate SEO-optimized content, images, and videos for your products</p>
+  </header>
+
+  <main class="main-content">
+    <section class="input-section">
+      <div class="model-selector">
+        <label for="modelSelect">AI Model:</label>
+        <select id="modelSelect">
+          <option value="gpt-4.1-mini">GPT-4.1 Mini (Default)</option>
+          <option value="gpt-4o">GPT-4o</option>
+          <option value="gpt-4-turbo">GPT-4 Turbo</option>
+          <option value="gpt-3.5-turbo">GPT-3.5 Turbo</option>
+        </select>
+        <div class="tooltip">
+          <i class="fas fa-info-circle"></i>
+          <span class="tooltip-text">Select the AI model to use for text generation</span>
+        </div>
+      </div>
+
+      <div class="image-model-selector">
+        <label for="imageModelSelect">Image Model:</label>
+        <select id="imageModelSelect">
+          <option value="gpt-image-1">DALL-E 3 (Default)</option>
+          <option value="gpt-image-2">DALL-E 2</option>
+          <option value="qubrid-image-1">Qubrid Tongyi-MAI</option>
+        </select>
+        <div class="tooltip">
+          <i class="fas fa-info-circle"></i>
+          <span class="tooltip-text">Select the AI model to use for image generation</span>
+        </div>
+      </div>
+
+      <div class="video-model-selector">
+        <label for="videoModelSelect">Video Model:</label>
+        <select id="videoModelSelect">
+          <option value="runway-gen2">Runway Gen-2 (Default)</option>
+        </select>
+        <div class="tooltip">
+          <i class="fas fa-info-circle"></i>
+          <span class="tooltip-text">Select the AI model to use for video generation</span>
+        </div>
+      </div>
+
+      <div class="textarea-container">
+        <textarea id="descriptionInput" placeholder="Paste your product description here..."></textarea>
+        <div class="character-count"><span id="charCount">0</span> characters</div>
+      </div>
+
+      <div class="button-row">
+        <button id="generateBtn" class="primary-btn">
+          <i class="fas fa-wand-magic-sparkles"></i> Generate All
+        </button>
+        <button id="generateImageBtn" class="secondary-btn">
+          <i class="fas fa-image"></i> Generate Image
+        </button>
+        <button id="generateVideoBtn" class="secondary-btn">
+          <i class="fas fa-video"></i> Generate Video
+        </button>
+      </div>
+      
+      <div id="status-container">
+        <div id="status-icon" class="hidden"><i class="fas fa-spinner fa-spin"></i></div>
+        <p id="status"></p>
+      </div>
+    </section>
+
+    <section class="results">
+      <div class="card">
+        <div class="card-header">
+          <h2><i class="fas fa-heading"></i> Title</h2>
+          <button class="copy-btn" data-target="titleOutput">
+            <i class="fas fa-copy"></i> Copy
+          </button>
+        </div>
+        <pre id="titleOutput" class="output"></pre>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h2><i class="fas fa-tags"></i> Tags (13)</h2>
+          <button class="copy-btn" data-target="tagsOutput">
+            <i class="fas fa-copy"></i> Copy
+          </button>
+        </div>
+        <pre id="tagsOutput" class="output"></pre>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h2><i class="fas fa-align-left"></i> Description</h2>
+          <button class="copy-btn" data-target="descriptionOutput">
+            <i class="fas fa-copy"></i> Copy
+          </button>
+        </div>
+        <pre id="descriptionOutput" class="output"></pre>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h2><i class="fas fa-image"></i> Generated Image</h2>
+          <button id="downloadImageBtn" class="copy-btn" disabled>
+            <i class="fas fa-download"></i> Download
+          </button>
+        </div>
+        <div id="imageContainer" class="media-container">
+          <p class="media-placeholder">No image generated yet.</p>
+          <img id="generatedImage" alt="Generated product image" style="display:none;" />
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h2><i class="fas fa-video"></i> Generated Video</h2>
+          <button id="downloadVideoBtn" class="copy-btn" disabled>
+            <i class="fas fa-download"></i> Download
+          </button>
+        </div>
+        <div id="videoContainer" class="media-container">
+          <p class="media-placeholder">No video generated yet.</p>
+          <video id="generatedVideo" controls style="display:none;"></video>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <p>© 2025 Content Generator | Powered by OpenAI and Qubrid</p>
+  </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
